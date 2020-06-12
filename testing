@@ -1,0 +1,19 @@
+DNS resolve by /etc/hosts
+but if disabled somehow which means no valid in this file for DNS resolve.
+
+
+Add 'addn-hosts=/etc/hosts' into /etc/NetworkManager/dnsmasq.d/hosts.conf ( created if doesn't exist )
+/etc/NetworkManager/dnsmasq.d/hosts.conf
+addn-hosts=/etc/hosts
+2. Restart network service ( actually is dnsmasq service )
+
+bash command
+service NetworkManager restart
+Special characters convert
+< sometimes you have special character in your credentials for proxy authentication, you can refer below list to convert >
+
+@	%40
+:	%3A
+!	%21
+#	%23
+$	%24
